@@ -12,19 +12,19 @@ public class SearchCarTest extends BaseTests {
     }
 
     @Test
-    public void SearchCarZhiguli() throws InterruptedException {
+    public void SearchCarAudi() throws InterruptedException {
+        loginPage.
+                openPage();
+        searchCarSteps.
+                searchCarAudi();
+    }
+
+    @Test
+    public void SearchCarMoskvich() throws InterruptedException {
         loginPage.
                 openPage();
         searchCarSteps.
                 searchCarMoskvich();
-    }
-
-    @Test
-    public void SearchCarJaguar() throws InterruptedException {
-        loginPage.
-                openPage();
-        searchCarSteps.
-                searchCarJaguar();
     }
 }
 
