@@ -4,12 +4,13 @@ import org.testng.annotations.Test;
 
 public class ChangeProfileTest extends BaseTests {
     @Test
-    public void profileChange() {
+    public void profileChange() throws InterruptedException {
         loginPage.
                 openPage();
-            changeProfilePage.
-                    singIn("audi@mailinator.com", "qwerty123")
-                    .profileChange("Михаил")
-                    .logOut();
+        singInSteps.
+                singIn();
+        changeProfilePage
+                .profileChange("Михаил")
+                .logOut();
     }
 }
