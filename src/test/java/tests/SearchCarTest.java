@@ -12,11 +12,11 @@ public class SearchCarTest extends BaseTests {
     }
 
     @Test
-    public void SearchCarAudi() throws InterruptedException {
+    public void SearchCarBMW() throws InterruptedException {
         loginPage.
                 openPage();
         searchCarSteps.
-                searchCarAudi();
+                searchCarBMW();
     }
 
     @Test

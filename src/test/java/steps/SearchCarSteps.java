@@ -27,10 +27,10 @@ public class SearchCarSteps {
         return this;
     }
 
-    @Step("Search Car Audi")
-    public SearchCarSteps searchCarAudi() {
+    @Step("Search Car BMW")
+    public SearchCarSteps searchCarBMW() {
         searchCarPage.
-                searchCar("Audi", "A8", "2012", "2020", "100",
+                searchCar("BMW", "M3", "2012", "2020", "100",
                         "95000");
         return this;
     }
