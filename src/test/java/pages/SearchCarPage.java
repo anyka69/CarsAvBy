@@ -13,17 +13,14 @@ public class SearchCarPage extends BasePage {
     public SearchCarPage(WebDriver driver) {
         super(driver);
     }
-
     @Override
     public LoginPage openPage() {
         return null;
     }
-
     @Override
     public LoginPage isPageOpened() {
         return null;
     }
-
     @Step("Search Cars")
     public SearchCarPage searchCar(String markaCar, String modelCar, String yearFrom, String yearTo,
                                    String priceValueMinPre, String priceValueMaxPre){
@@ -48,11 +45,11 @@ public class SearchCarPage extends BasePage {
         Select priceMaxPre = new Select(driver.findElement(By.id("price_value_max_pre")));
         priceMaxPre.selectByVisibleText(priceValueMaxPre);
         driver.findElement(By.xpath("//*[contains(text(),'BYN')]")).click();
-        String search =driver.findElement(By.className("js-tabsfilter-hint")).getText();
+        String search = driver.findElement(By.cssSelector(".js-tabsfilter-hint")).getText();
         AllureUtils.takeScreenshot(driver);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit_presearch")));
         driver.findElement(By.id("submit_presearch")).click();
-        String searchCar =driver.findElement(By.className("heading-title")).getText();
+        String searchCar = driver.findElement(By.cssSelector(".heading-title")).getText();
         AllureUtils.takeScreenshot(driver);
         assertEquals("Error",search,searchCar);
         return this;

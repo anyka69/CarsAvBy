@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class SearchCarTest extends BaseTests {
     @Test
-    public void SearchCarPorsche() {
+    public void SearchCarPorsche() throws InterruptedException {
         loginPage.
                 openPage();
         searchCarSteps.
@@ -12,7 +12,7 @@ public class SearchCarTest extends BaseTests {
     }
 
     @Test
-    public void SearchCarZhiguli() {
+    public void SearchCarZhiguli() throws InterruptedException {
         loginPage.
                 openPage();
         searchCarSteps.
@@ -20,7 +20,7 @@ public class SearchCarTest extends BaseTests {
     }
 
     @Test
-    public void SearchCarAudi() {
+    public void SearchCarAudi() throws InterruptedException {
         loginPage.
                 openPage();
         searchCarSteps.
