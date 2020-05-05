@@ -10,6 +10,7 @@ import untils.AllureUtils;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class SearchCarPage extends BasePage {
+    By SUBMIT_PRE_SEARCH = By.id("submit_presearch");
     public SearchCarPage(WebDriver driver) {
         super(driver);
     }
@@ -47,11 +48,11 @@ public class SearchCarPage extends BasePage {
         driver.findElement(By.xpath("//*[contains(text(),'BYN')]")).click();
         String search = driver.findElement(By.cssSelector(".js-tabsfilter-hint")).getText();
         AllureUtils.takeScreenshot(driver);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit_presearch")));
-        driver.findElement(By.id("submit_presearch")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_PRE_SEARCH));
+        driver.findElement(SUBMIT_PRE_SEARCH).click();
         String searchCar = driver.findElement(By.cssSelector(".heading-title")).getText();
         AllureUtils.takeScreenshot(driver);
-        assertEquals("Error",search,searchCar);
+        assertEquals("Error", search, searchCar);
         return this;
     }
 }
