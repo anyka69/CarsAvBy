@@ -10,6 +10,7 @@ public class SearchCarTest extends BaseTests {
         searchCarSteps.
                 searchCarPorsche();
     }
+
     @Test
     public void SearchCarZhiguli() {
         loginPage.
@@ -18,5 +19,12 @@ public class SearchCarTest extends BaseTests {
                 searchCarMoskvich();
     }
 
+    @Test
+    public void SearchCarAudi() {
+        loginPage.
+                openPage();
+        searchCarSteps.
+                searchCarAudi();
+    }
 }
 

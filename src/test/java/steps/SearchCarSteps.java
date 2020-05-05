@@ -26,5 +26,12 @@ public class SearchCarSteps {
                         "до");
         return this;
     }
-    
+
+    @Step("Search Car Audi")
+    public SearchCarSteps searchCarAudi() {
+        searchCarPage.
+                searchCar("Audi", "A8", "2012", "2020", "от",
+                        "95000");
+        return this;
+    }
 }
