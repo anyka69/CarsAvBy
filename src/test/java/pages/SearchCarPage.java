@@ -49,13 +49,13 @@ public class SearchCarPage extends BasePage {
         driver.findElement(By.xpath("//*[contains(text(),'BYN')]")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".js-tabsfilter-hint")));
         String search = driver.findElement(By.cssSelector(".js-tabsfilter-hint")).getText();
+        AllureUtils.takeScreenshot(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_PRE_SEARCH));
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        AllureUtils.takeScreenshot(driver);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_PRE_SEARCH));
         driver.findElement(SUBMIT_PRE_SEARCH).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".heading-title")));
         String searchCar = driver.findElement(By.cssSelector(".heading-title")).getText();
