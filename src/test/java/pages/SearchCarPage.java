@@ -25,7 +25,7 @@ public class SearchCarPage extends BasePage {
 
     @Step("Search Cars")
     public SearchCarPage searchCar(String markaCar, String modelCar, String yearFrom, String yearTo,
-                                   String priceValueMinPre, String priceValueMaxPre) throws InterruptedException {
+                                   String priceValueMinPre, String priceValueMaxPre) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("brand_id[]")));
         Select marka = new Select(driver.findElement(By.name("brand_id[]")));
         marka.selectByVisibleText(markaCar);

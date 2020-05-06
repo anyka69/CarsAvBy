@@ -6,13 +6,12 @@ import pages.SearchCarPage;
 
 public class SearchCarSteps {
     SearchCarPage searchCarPage;
-
     public SearchCarSteps(WebDriver driver) {
         searchCarPage = new SearchCarPage(driver);
     }
 
     @Step("Search Car Porsche")
-    public SearchCarSteps searchCarPorsche() throws InterruptedException {
+    public SearchCarSteps searchCarPorsche() {
         searchCarPage.
                 searchCar("Porsche", "911", "с", "по", "от",
                         "до");
@@ -20,7 +19,7 @@ public class SearchCarSteps {
     }
 
     @Step("Search Car Moskvich")
-    public SearchCarSteps searchCarMoskvich() throws InterruptedException {
+    public SearchCarSteps searchCarMoskvich() {
         searchCarPage.
                 searchCar("Москвич", "2138", "2018", "по", "от",
                         "до");
@@ -28,7 +27,7 @@ public class SearchCarSteps {
     }
 
     @Step("Search Car BMW")
-    public SearchCarSteps searchCarBMW() throws InterruptedException {
+    public SearchCarSteps searchCarBMW() {
         searchCarPage.
                 searchCar("BMW", "M3", "2012", "2020", "100",
                         "95000");
