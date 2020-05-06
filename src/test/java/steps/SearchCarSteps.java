@@ -12,7 +12,7 @@ public class SearchCarSteps {
     }
 
     @Step("Search Car Porsche")
-    public SearchCarSteps searchCarPorsche() {
+    public SearchCarSteps searchCarPorsche() throws InterruptedException {
         searchCarPage.
                 searchCar("Porsche", "911", "с", "по", "от",
                         "до");
@@ -20,7 +20,7 @@ public class SearchCarSteps {
     }
 
     @Step("Search Car Moskvich")
-    public SearchCarSteps searchCarMoskvich() {
+    public SearchCarSteps searchCarMoskvich() throws InterruptedException {
         searchCarPage.
                 searchCar("Москвич", "2138", "2018", "по", "от",
                         "до");
@@ -28,7 +28,7 @@ public class SearchCarSteps {
     }
 
     @Step("Search Car BMW")
-    public SearchCarSteps searchCarBMW() {
+    public SearchCarSteps searchCarBMW() throws InterruptedException {
         searchCarPage.
                 searchCar("BMW", "M3", "2012", "2020", "100",
                         "95000");
