@@ -47,22 +47,14 @@ public class SearchCarPage extends BasePage {
         Select priceMaxPre = new Select(driver.findElement(By.id("price_value_max_pre")));
         priceMaxPre.selectByVisibleText(priceValueMaxPre);
         driver.findElement(By.xpath("//*[contains(text(),'BYN')]")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".js-tabsfilter-hint")));
         String search = driver.findElement(By.cssSelector(".js-tabsfilter-hint")).getText();
         AllureUtils.takeScreenshot(driver);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_PRE_SEARCH));
         driver.findElement(SUBMIT_PRE_SEARCH).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".heading-title")));
         String searchCar = driver.findElement(By.cssSelector(".heading-title")).getText();
         AllureUtils.takeScreenshot(driver);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         assertEquals("Error", search, searchCar);
         return this;
     }
