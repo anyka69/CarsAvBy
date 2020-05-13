@@ -57,14 +57,14 @@ public class SearchCarPage extends BasePage {
         AllureUtils.takeScreenshot(driver);
         wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_PRE_SEARCH));
         try {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         driver.findElement(SUBMIT_PRE_SEARCH).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".heading-title")));
         try {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
